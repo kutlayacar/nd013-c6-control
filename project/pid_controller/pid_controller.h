@@ -10,25 +10,30 @@
 class PID {
 public:
 
-   /**
-   * TODO: Create the PID class
-   **/
+    /**
+    * TODO: Create the PID class
+    **/
 
     /*
     * Errors
     */
+    double current_cte, previous_cte, difference_cte, sum_cte;
+    double p_error, i_error, d_error;
 
     /*
     * Coefficients
     */
+    double kp, ki, kd;
 
     /*
     * Output limits
     */
-  
+    double output_lim_min, output_lim_max;
+
     /*
     * Delta time
     */
+    double delta_time;
 
     /*
     * Constructor
@@ -54,7 +59,7 @@ public:
     * Calculate the total PID error.
     */
     double TotalError();
-  
+
     /*
     * Update the delta time.
     */
